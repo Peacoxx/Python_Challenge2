@@ -1,6 +1,6 @@
 import os
 import csv
-#path to csv
+#path to csv used initial coding from pybank part of the lesson
 election_data = os.path.join("Resources", "election_data.csv")
 #Set variables
 total_votes = 0
