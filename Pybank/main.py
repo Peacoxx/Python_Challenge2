@@ -4,7 +4,7 @@ import csv
 # Construct the file path - tried using the same code from Cereal CSV, but could not figure out why the csv was not pulling. Had to get help via chat gpt
 csvpath = os.path.join('/', 'Users', 'pamala', 'Documents', 'GitHub', 'python_challenge', 'Pybank', 'Resources', 'budget_data.csv')
 
-# Initialize variables - received help via chat gpt 
+# Outline variables - received help via chat gpt 
 total_months = 0
 Total_Profit_Losses = 0
 profit_changes = []  # List to store the changes in profit/losses
@@ -26,7 +26,7 @@ try:
         total_months = 1
         Total_Profit_Losses += previous_month_profit
         
-        # Process each row in the CSV file
+        # For Loop to Process each row in the CSV file
         for row in csvreader:
             # Increment the total months count
             total_months += 1
@@ -60,7 +60,7 @@ try:
         print(f"Average Change in Profit/Losses: ${average_change:.2f}")
         print(f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})")
         print(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
-#coding help from Chat GPT due to file error generated and tried various ways to code it and it would not work. 
+#coding help from Chat GPT due to file error generated and tried various ways to code it and it would not work below is the only way Stopped getting errors. 
 except FileNotFoundError:
     print(f"File not found: {csvpath}")
 except Exception as e:
